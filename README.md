@@ -76,9 +76,6 @@ KCMD("komut_adı", minimum, maksimum) { ... }
 - Parametre eksikliği veya fazlalığı KCMD tarafından otomatik engellenir.
 - Hem küçük scriptler hem büyük sunucu sistemleri için uygundur.
 
-1. Repo'yu forklayın
-2. Değişiklikleri yapın
-3. Pull Request gönderin
 
 ### 📄 Lisans
 Bu proje MIT lisansı ile sunulmuştur. Özgürce kullanabilir, düzenleyebilir ve paylaşabilirsiniz.
