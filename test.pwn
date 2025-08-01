@@ -14,6 +14,7 @@ KCMD("goto", 1) {
     GetPlayerPos(targetid, x, y, z);
     SetPlayerPos(playerid, x + 1.0, y, z); 
     SendClientMessage(playerid, -1, "goto basarili");
+	return 1;
 }
 
 
@@ -32,4 +33,5 @@ KCMD("kick", 1, 2) {
     format(msg, sizeof(msg), "%s (%d) sunucudan atıldı ve sebep belirtilmis, sebep: %s", name, targetid, reason);
     SendClientMessageToAll(-1, msg);
     Kick(targetid);
+	return 1;
 }
