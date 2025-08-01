@@ -1,14 +1,8 @@
 /*
-    kcmd.inc - Ultra Fast Command Processor
+    kcmd.inc 
     Build: 3.2.1-stable
-    Developer: KralCMD
+    Developer: Krips
     
-    Zero setup required. Just use it.
-    
-    KCMD("heal") { 
-        SetPlayerHealth(playerid, 100.0); 
-        SendClientMessage(playerid, -1, "HP restored!"); 
-    }
 */
 
 #if defined _inc_kcmd
