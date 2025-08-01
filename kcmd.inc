@@ -1,7 +1,14 @@
 /*
-
-KripsCMD - 1.0.78 version
-
+    kcmd.inc - Ultra Fast Command Processor
+    Build: 3.2.1-stable
+    Developer: KralCMD
+    
+    Zero setup required. Just use it.
+    
+    KCMD("heal") { 
+        SetPlayerHealth(playerid, 100.0); 
+        SendClientMessage(playerid, -1, "HP restored!"); 
+    }
 */
 
 #if defined _inc_kcmd
@@ -328,7 +335,7 @@ stock __KCMD_ResolveAlias(const input[], output[], max_len = sizeof(output)) {
         }
     }
     
-    strcpy(output, input, max_len);
+    format(output, max_len, "%s", input);
     return 0;
 }
 
@@ -403,7 +410,7 @@ public OnPlayerCommandText(playerid, cmdtext[]) {
     if(g_CommandRegistry[cmd_idx][cmd_min_args] > 0) {
         new arg_count = 0;
         new temp_params[KCMD_PARAM_LEN];
-        strcpy(temp_params, parameters, sizeof(temp_params));
+        format(temp_params, sizeof(temp_params), "%s", parameters);
         
         if(strlen(temp_params) > 0) {
             arg_count = 1;
